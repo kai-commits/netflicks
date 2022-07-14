@@ -42,7 +42,7 @@ export const Signup = () => {
                   <span className='text-gray-600'>
                     Already subscribed to Netflicks?
                   </span>{' '}
-                  <Link to='/login'>Sign in</Link>
+                  <Link to='/login'>Sign In</Link>
                 </p>
               </form>
             </div>
