@@ -13,26 +13,24 @@ const AuthContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
-  const signUp = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password);
-    setDoc(doc(db, 'users', email), {
+  const signUp = async (email, password) => {
+    await createUserWithEmailAndPassword(auth, email, password);
+    await setDoc(doc(db, 'users', email), {
       savedShows: [],
     });
   };
 
-  const logIn = (email, password) => {
-    return signInWithEmailAndPassword(auth, email, password);
-  };
+  const logIn = async (email, password) => signInWithEmailAndPassword(auth, email, password);
 
-  const logOut = () => {
-    return signOut(auth);
-  };
+  const logOut = async () => signOut(auth);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
     });
-    return unsubscribe();
+    return () => {
+      unsubscribe();
+    }
   });
 
   return (
