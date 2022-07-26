@@ -40,7 +40,7 @@ export const SavedShows = () => {
 
   return (
     <>
-      <h2 className='text-white font-bold md:text-xl p-4'>My Shows</h2>
+      <h2 className='text-white font-bold md:text-xl p-4'>Favourited Movies</h2>
       <div className='relative flex items-center group'>
         <MdChevronLeft
           className='bg-white left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block'
