@@ -8,3 +8,10 @@ This project is a front-end clone of Netflix built for the purpose of learning T
 
 ## Screenshots
 
+![home-page](https://github.com/kai-commits/netflicks/blob/main/docs/netflicks-home.png)
+
+![login-page](https://github.com/kai-commits/netflicks/blob/main/docs/netflicks-login.png)
+
+![demo-gif](https://github.com/kai-commits/netflicks/blob/main/docs/netflicks-demo.gif)
+
+Course originally created by Clint Briley.
